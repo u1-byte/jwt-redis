@@ -11,6 +11,10 @@ services:
       - .:/app
     environment:
       FLASK_ENV: development
+      JWT_ALG: HS256
+      JWT_SECRET_KEY: SuperS3cr3t!
+      JWT_ACCESS_EXP: 360
+      JWT_REFRESH_EXP: 720
   redis:
     image: "redis:7.2.5-alpine"
     ports:

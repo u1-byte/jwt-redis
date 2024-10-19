@@ -13,3 +13,8 @@ def migrate_users_data():
             count += 1
             logging.warning(f"Add {username} records.")
     logging.warning(f"Migration completed. Added {count} records.")
+
+
+def empty_data():
+    user_client.flushdb()
+    logging.warning("All users data deleted.")

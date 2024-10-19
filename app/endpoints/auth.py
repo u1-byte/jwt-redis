@@ -11,6 +11,7 @@ from flask_jwt_extended import (
 )
 from app.env_load import jwt_refresh_exp
 from app.lib.redis_client import auth_client
+from app.lib.pwd_util import is_password_match
 from app.models import User
 
 api = Namespace("Authentication", description="Auth Endpoints", path="/auth")
@@ -68,7 +69,7 @@ class Login(Resource):
         try:
             res = req.parse_args()
             user = User.get(res["username"])
-            if user and user.password == res["password"]:
+            if user and is_password_match(res["password"], user.password):
                 claims = {
                     "id": user.id,
                     "username": user.username,

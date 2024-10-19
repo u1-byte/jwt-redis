@@ -48,9 +48,9 @@ docker-compose up --build -d
    ```
 
 ### API Endpoints
-Base URL: `http://localhost:5000/`
-API Docs: `http://localhost:5000/docs`
-Token: `Bearer <apiKey>`
+Base URL: `http://localhost:5000/`  
+API Docs: `http://localhost:5000/docs`  
+Token: `Bearer <apiKey>`  
 
 **Auth Endpoints `/auth`**
  - `POST /login` - Login and receive fresh access and refresh tokens

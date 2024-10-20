@@ -13,7 +13,7 @@ This project is a Flask-based API that demonstrates the use of Redis for token b
 
 1. Clone the Repository
 	```
-	git clone <project repository>
+	git clone https://github.com/u1-byte/jwt-redis.git
 	cd jwt-redis
 	```
 2. Install Docker and Docker Compose if not already installed.
